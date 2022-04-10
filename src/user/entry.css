@@ -1,0 +1,23 @@
+.entry-page{
+    width: 100vw;
+    height: 100vh;
+    display:grid;
+    grid-template-columns:  minmax(30%, 35%) 70%;
+
+}
+
+
+.login-decor-image{
+    background-image: url("../component/acess/brooke-lark-oaz0raysASk-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.register-decor-image{
+    background-image: url("../component/acess/register2.svg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+   
+}

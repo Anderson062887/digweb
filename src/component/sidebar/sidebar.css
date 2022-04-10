@@ -1,0 +1,19 @@
+ .ani{
+     position: inherit;
+    /* transition: left 0.5s ease-out;
+    left:-1000px;  */
+    border:2px solid red;
+    animation: hide;
+    animation-fill-mode:forwards;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+   
+}
+@keyframes hide{
+    from{
+        left:0px;
+    }
+    to{
+        left: -500px;
+    }
+}

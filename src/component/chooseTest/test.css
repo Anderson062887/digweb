@@ -1,0 +1,53 @@
+/* general */
+/* padding miduin */
+.pad-mid{
+    padding: 20px;
+    /* border:1px solid; */
+    
+}
+/* align left */
+.align-left{
+    text-align: left;
+}
+/* set text color to gray */
+.text-color-gray{
+  color: gray;
+}
+
+.background-primary{
+    background: rgba(33, 152, 244, 0.927);
+    color:white;
+}
+
+.container{
+    box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.2);
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 0.8px;
+
+  }
+
+.box-header{
+    background: rgba(33, 152, 244, 0.927);
+    border-radius: 10px 10px 2px 2px;
+    padding: 20px;
+    color: white;
+  }
+  .btn-submit{
+    background: rgba(33, 152, 244, 0.927);
+    color:white;
+    border: none;
+    padding: 4px 14px;
+    border-radius: 6px;
+   }
+   .btn{
+      padding: 10px 20px;
+   }
+   .container input{
+       margin-right: 6px;
+      
+   }
+   .container label{
+       font-size: 1.2rem;
+   }

@@ -1,0 +1,11 @@
+.cart{
+    box-Shadow:0px 0px 4px 0.6px rgba(0,0,0,0.2);
+    padding:10px;
+    border-radius: 10px;
+}
+.cart *{
+    margin: 4px 0;
+}
+.cart span{
+    display: block;
+}

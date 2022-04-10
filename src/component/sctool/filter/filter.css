@@ -1,0 +1,97 @@
+.selection-container{
+    padding: 0 20px;
+    /* border:1px solid; */
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:30px;
+}
+.selection-box{
+    /* border:1px solid; */
+  
+    max-width: 100%;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+ 
+}
+.selection-box h2,h3{
+    margin: 6px 0;
+    text-align: left;
+}
+.selection-box select{
+    display: inline-block;
+    width: 100%;
+    font-size: 1.1rem;
+}
+.btn-seach{
+    width: 50%;
+    padding: 10px;
+    background-color: #ea4c89;
+    border-radius: 4px;
+}
+.align-center{
+    /* padding: 4px; */
+    /* border: 1px solid; */
+  display: flex;
+  /* justify-content: center; */
+  align-items:flex-end;
+
+}
+
+/* ------------------------------------------------------ */
+
+.selection-box-parent{
+    position: relative;
+  
+}
+.select-wrapper{
+    position: absolute;
+    background-color: rgba(201, 200, 200, 0.81);
+    overflow: scroll;
+    width: 100%;
+}
+.selection-box-div{
+    max-height: 0;
+    transition: all 0.4s ease-out;
+    
+}
+.display-visible-div{ 
+    transition:max-height 0.3s ease-in;
+    max-height: 300px;     
+  }
+  .select-wrapper p{
+      padding: 2px;
+      margin: 2px 0;
+      cursor: pointer;
+      font-weight: bold;
+  }
+
+  .input-box{
+      border:0.9px solid lightgray;
+      display: flex;
+      padding: 2px;
+  }
+  .input-box .input-display{
+    padding: 2px;
+      width: 85%;
+    /* border:1px solid; */
+  }
+ .input-box .input-icon{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     width: 14%;
+     margin: 0 auto;
+     /* border:1px solid; */
+     cursor: pointer;
+ }
+ .rotate-down{
+    transition: all 0.4s ease-out;
+    transform:  rotate(90deg); 
+   }
+   .rotate-up{
+    transition: all 0.5s ease-out;
+    transform:  rotate(0deg); 
+}
