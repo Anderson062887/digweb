@@ -27,9 +27,10 @@ export const Sidebar =(props)=>{
                     <NavLink to="/microorganisms/parasites">Parasites</NavLink>
              </LinkBox>
               <LinkBox title="SC tool" icon={"🧰"} setCurrentVisable ={setCurrentVisable}  visible={visible}>
-                    <NavLink to="/tools">walk-in </NavLink>
+                    <NavLink  to="/tools/walkin">walk-in </NavLink>
+
                     <LinkBox title="SC List Action " icon={"🗂"} setCurrentVisable ={setCurrentVisable}  visible={visible}>
-                        <NavLink to="/list">List downloaded</NavLink>
+                        <NavLink exact to="/list">List downloaded</NavLink>
                         <NavLink to="/list/upload">add List</NavLink>
                     </LinkBox>
              </LinkBox>

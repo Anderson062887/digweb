@@ -1,5 +1,5 @@
 import './App.css';
-import React,{useState} from "react";
+import React,{useState,useReducer} from "react";
 import {BrowserRouter as Router,Route,Switch,Link} from "react-router-dom";
 import {Nav} from "./component/Nav";
 import Micro from "./component/micro/Micro";
@@ -12,6 +12,8 @@ import ListDownloads from "./component/sctool/dwlist/FileList";
 import Order from "./component/sctool/dwlist/Order";
 import {Sidebar} from "./component/sidebar/sidebar";
 import  UploadFileForm from "./component/sctool/dwlist/uploadForm";
+import {getOrders,postOrders }from "./util/api";
+//  postOrders().then(d=> console.log(d)).catch(e => console.log(e)) 
  
 const Home =()=>{
 
@@ -46,11 +48,8 @@ const Personal =()=>(
 
 
 function App() {
+const [show,toggleNav] = useReducer( show => !show ,false )
 
-const [show,setshow] = useState(false)
-const navState =()=>{
-    setshow(!show);
-}
 
   return(
     <Consumer>
@@ -62,9 +61,8 @@ const navState =()=>{
             <Router>
                   {user !== null && <Sidebar show={show}/>} 
              <div className="route-box"> 
-                  {user !== null && <Nav  hideNav={navState} show={show}/> } 
+                  {user !== null && <Nav  hideNav={toggleNav} show={show}/> } 
                   
-  
             <Switch>
                   
                    <Route exact path="/login" render={(props)=><Login {...props} setuser={setUser} /> } /> 
