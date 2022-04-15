@@ -1,0 +1,91 @@
+
+.info-container{
+    position: relative;
+    background-color: white;
+    width: 35%;
+    max-width: 600px;
+    border-radius: 10px;
+    z-index: 11;
+     box-shadow: 0px 0px 6px 0.5px rgba(0,0,0,0.3); 
+     animation: movein;
+     animation-fill-mode: forwards;
+     animation-duration: 0.3s;
+     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+.info-box-wrap{
+    /* background-color: blue; */
+    
+    width: 100%;
+    max-height: 280px;
+    /* min-height: 30vh; */
+   /* max-height: 100%; */
+    display: grid;
+    color: rgb(121, 119, 119);
+    grid-template-rows: 50px 1fr 1fr 1.5fr;
+    position: relative;
+    z-index: 12;
+    padding: 10px;
+    /* align-content: center;
+    align-items: center; */
+}
+
+
+.closeModal{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(167, 110, 110, 0.2);
+    /* border:1px solid red; */
+}
+.input-wrap-edit{
+    /* border:1px solid; */
+    /* display: grid;
+    grid-template-columns: 0.5fr 2fr; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+}
+.input-wrap-edit input{
+    width: 80%;
+    padding: none;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}
+
+.action-btn-wrap{
+    /* border:1px solid red; */
+    color: rgb(121, 119, 119);
+    color:black;
+    display:flex;
+    justify-content: space-around;
+    flex-basis: 80px;
+    padding: 10px;
+    
+}
+.action-btn-wrap .edit-btn{
+    flex-basis: 100px;
+    border-radius: 6px;
+}
+.btn-inactive{
+    background-color: rgba(78, 78, 228, 0.5);
+}
+.btn-active{
+    background-color: rgba(78, 78, 228, 1); 
+}
+
+.action-btn-wrap .delete-btn{
+    padding: 0 20px;
+    background-color: rgba(235, 17, 17, 0.927);
+    border-radius: 6px;
+    flex-basis: 100px;
+    
+}
+.btn-desabled{
+    background-color: rgba(235, 17, 17, 0.55);
+}
