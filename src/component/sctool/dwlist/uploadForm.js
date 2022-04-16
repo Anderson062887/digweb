@@ -3,7 +3,7 @@ import "./uploadForm.css";
 import {Warning} from "../../warning";
 import { FcCheckmark} from "react-icons/fc";
 import XLSX from "xlsx";
-import {postOrders } from "../../../util/api"
+import {postOrders } from "../../../util/restaurantApi/restaurantApi"
 
 class StrategyFilter{
     filterArrayLengthOf7(list){

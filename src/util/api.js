@@ -85,30 +85,5 @@ export async function editItem(loc,num) {
     }
 }
 
-export async function getOrders() {
-    try {
-        const res = await fetch(`http://localhost:5000/orders`);
-          return  res.json(); 
-    } catch (error) {
-        console.log(error)
-    }
-  
-}
-export async function postOrders(data) {
-    try {
-        const res = await fetch(`http://localhost:5000/orders`,{
-            method:"post",
-            credentials:"same-origin",
-            headers: {
-                'Content-Type': 'application/json'
-              },
-              body:JSON.stringify(data)
 
-        });
-          return  res.json(); 
-    } catch (error) {
-        console.log(error)
-    }
-  
-}
 

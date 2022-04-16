@@ -1,0 +1,19 @@
+.add-form-wrapper{
+    /* border:1px solid black; */
+    padding: 20px;
+}
+.add-form-wrapper form{
+    width: 60%;
+    /* border:1px solid black; */
+    margin: auto;
+}
+.add-form-wrapper div{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+.add-form-wrapper div input,button{
+    font-size: 1.2em;
+    padding: 8px;
+  width: 90%;
+}

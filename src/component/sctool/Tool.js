@@ -1,5 +1,8 @@
 import React,{useState} from "react";
 import Walkin from "../walkin/walk";
+import {Restaurant} from "../sctool/restaurantFile/RestaurantsDisplay";
+import {NewRestaurantForm} from "../sctool/restaurantFile/AddRestaurant"
+import {Route}from "react-router-dom";
 import "./tool.css";
 
 
@@ -27,11 +30,14 @@ const Info =(props)=>{
 
 const Tool = ({match})=>{
 
-
     return(
 
         <div>
-            <Walkin />
+          
+          <Route  exact path={`${match.path}/walkin`} component={Walkin} />
+          <Route  exact path={`${match.path}/restaurants`} component={Restaurant} />
+          <Route  exact path={`${match.path}/restaurants/add`} component={NewRestaurantForm} />
+            
         </div>
     )
 }
