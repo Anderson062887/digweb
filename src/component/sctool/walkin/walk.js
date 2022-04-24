@@ -1,8 +1,9 @@
 import React from "react";
 // import {AddInfo} from "./addinfo/addInfo";
 import Col from "./section/col";
-import  {getWalkInData}from "../../util/api";
-import Loader from "../Loader/loader";
+// import  {getWalkInData}from "../../util/api";
+import  {getWalkInData}from "../../../util/api";
+import Loader from "../../Loader/loader";
 import DownLoad from "./download/download";
 
 

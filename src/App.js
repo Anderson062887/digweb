@@ -1,5 +1,5 @@
 import './App.css';
-import React,{useState,useReducer} from "react";
+import React,{useReducer} from "react";
 import {BrowserRouter as Router,Route,Switch,Link} from "react-router-dom";
 import {Nav} from "./component/Nav";
 import Micro from "./component/micro/Micro";
@@ -12,8 +12,8 @@ import ListDownloads from "./component/sctool/dwlist/FileList";
 import Order from "./component/sctool/dwlist/Order";
 import {Sidebar} from "./component/sidebar/sidebar";
 import  UploadFileForm from "./component/sctool/dwlist/uploadForm";
-import {getOrders,postOrders }from "./util/api";
-//  postOrders().then(d=> console.log(d)).catch(e => console.log(e)) 
+
+
  
 const Home =()=>{
 

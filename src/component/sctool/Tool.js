@@ -1,5 +1,6 @@
 import React,{useState} from "react";
-import Walkin from "../walkin/walk";
+// import Walkin from "../walkin/walk";
+import Walkin from "./walkin/walk";
 import {Restaurant} from "../sctool/restaurantFile/RestaurantsDisplay";
 import {NewRestaurantForm} from "../sctool/restaurantFile/AddRestaurant"
 import {Route}from "react-router-dom";

@@ -24,6 +24,19 @@ export async function postOrders(data) {
     }
   
 }
+
+export async function getRestaurant() {
+    try {
+        const res = await fetch(`http://localhost:5000/orders/restaurant/list`)
+
+          return  res.json(); 
+    } catch (error) {
+        console.log(error)
+    }
+  
+}
+
+
 export async function createRestaurant(data) {
     try {
         const res = await fetch(`http://localhost:5000/orders/restaurant/create`,{

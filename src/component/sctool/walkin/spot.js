@@ -4,7 +4,7 @@ import {AddInfo }from "./addinfo/addInfo";
 import {ModalInfo} from "./modal/modaInfo";
 import { BsPencilSquare } from "react-icons/bs";
 import { BsInfoCircle} from "react-icons/bs";
-import {CreateItem,deleteItem,editItem} from "../../util/api"
+import {CreateItem,deleteItem,editItem} from "../../../util/api"
 
 
 
