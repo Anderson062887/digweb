@@ -30,7 +30,7 @@ class Order extends React.Component{
                           </div>
 
                                {orders.length <= 0 ? <Loader />:
-                               <Filter orders={orders}/>}
+            <Filter orders={orders} render={(list)=> <ListDisplay list={list}/>}/>}
 
              </div>)
 

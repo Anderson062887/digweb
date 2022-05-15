@@ -1,6 +1,5 @@
 import React from "react";
 import "./filter.css";
-import{ ListDisplay } from "../dwlist/ListUiDisplay";
 import listfilter from "./filterStrategy";
 import SelectionDiv from "./selector";
 
@@ -37,6 +36,7 @@ class Filter extends React.Component{
             },
             
         }
+        console.log(this.props)
        
         this.handleChange = this.handleChange.bind(this);
        
@@ -117,8 +117,8 @@ class Filter extends React.Component{
                       selected={filterCriteria.Restaurant} /> 
 
                  </div>
+                 {this.props.render(list)}
                
-                  <ListDisplay list={list}/>
                 </div>}
                
 

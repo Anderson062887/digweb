@@ -30,7 +30,7 @@ const AddInfo =(props)=>{
            <form onSubmit={handleSumit}>
            <div className="form-header">
                  <h3>Add Item to the slot</h3>
-             <button onClick={props.clearModal}>< AiFillCloseCircle size={24 } color={"rgb(132, 130, 130)"} /></button>
+             <span onClick={props.clearModal} style={{cursor:"pointer"}}>< AiFillCloseCircle size={30 } color={"rgb(132, 130, 130)"} /></span>
              </div>
              <div className="input-wrap">
              <label htmlFor="info">Item :</label>

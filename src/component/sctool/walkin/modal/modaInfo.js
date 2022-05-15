@@ -24,19 +24,22 @@ const ModalInfo = ({data,clearmodal,deleteInfo,clearModalAndEdit,history})=>{
             <div className="info-box-wrap">
                 <CloseModal   clearmodal={clearmodal} editing={editing} date={date} />
             <h1> Item: {name}</h1>         
-     {editing === true?<div className="input-wrap-edit"> <h3> Quantity :</h3><input onChange={({target})=>setNum(target.value)}  value={num} /> </div>:<p>Quantity: {num}</p>}
+     {editing === true?
+     <div className="input-wrap-edit"> 
+          <h3> Quantity :</h3><input onChange={({target})=>setNum(target.value)} value={num} /> 
+    </div>:<p>Quantity: {num}</p>}
 
-                        <div className="action-btn-wrap">
+                 <div className="action-btn-wrap">
                             <button className={ editing === true?"edit-btn btn-inactive":"edit-btn btn-active"} onClick={()=> setEditing(!editing)}>
                             {editing === false?  "Edit":"Done"}
-                                </button> 
+                            </button> 
 
-                                {editing === true? 
+                         {editing === true? 
                        <button   className={"delete-btn btn-desabled" } style={{backgroundColor:"white"}}>Delete</button> 
                       : <button   className={"delete-btn" } onClick={deleteInfo}>Delete</button>  }
                             
 
-                        </div>
+                 </div>
                             
                    
             </div>
