@@ -6,14 +6,71 @@
   color: #ea4c89;
 }
 .active{
-  border-left: 6px solid #ea4c89;
+  /* border-left: 6px solid #ea4c89; */
+  background-color: #ea4c89;
+  color: #fff;
 }
 .two-col-layout{
   display: grid;
-  grid-template-columns: minmax(250px,300px) auto;
+  /* grid-template-columns: minmax(250px,300px) auto; */
+ grid-template-columns:20% 80%; 
   position: relative;
 
 }
+
+.wide-view{
+  display: grid;
+   /* grid-template-columns: 0% 100%;  */
+   grid-template-columns:20% 80%; 
+  position: relative;
+  animation: grow;
+  animation-fill-mode:forwards;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+
+}
+
+@keyframes grow{
+  0%{
+    grid-template-columns:20% 80%; 
+  }
+  /* 10%{
+    grid-template-columns:18% 82%; 
+  }
+
+  15%{
+    grid-template-columns:16% 84%; 
+  }
+  25%{
+    grid-template-columns:15% 85%; 
+  }
+  25%{
+    grid-template-columns:13% 88%; 
+  }
+  50%{
+    grid-template-columns:10% 90%; 
+  }
+  75%{
+    grid-template-columns:7% 93%; 
+  }
+  85%{
+    grid-template-columns:5% 95%; 
+  }
+
+  95%{
+    grid-template-columns:3% 98%; 
+  } */
+  100%{
+    grid-template-columns:0% 100%; 
+  }
+  /* to{
+    grid-template-columns:0% 100%; 
+  } */
+}
+
+
+
+
 .sidebar{
   height: 100vh;
   position: sticky;
@@ -23,11 +80,13 @@
   display: grid;
   grid-template-rows: 0% 10% 90%;
   background: #F9F8FD; 
+  /* background: #ffffff;  */
 
  }
  .sidebar nav{
-   padding: 40px 0;
+   padding: 40px 0 10px 0;
    grid-row:3 / 4; 
+ 
  }
  .sidebar nav div{
   text-align: center;
@@ -42,12 +101,21 @@
    padding: 10px;
   
  }
+
+ /* box container for display side */
 .route-box{
-  
+  /* border:1px solid; */
+  /* width:100%; */
   display: flex;
   flex-direction: column;
   /* grid-template-rows: 80px minmax(calc(100vh - 80px),1fr); */
 }
+
+
+
+
+
+
 .navbar{
   /* grid-area: nav; */
   flex-basis: 80px;

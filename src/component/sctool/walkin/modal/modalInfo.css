@@ -18,7 +18,7 @@
     /* background-color: blue; */
     
     width: 100%;
-    max-height: 280px;
+    max-height: 480px;
     /* min-height: 30vh; */
    /* max-height: 100%; */
     display: grid;
@@ -29,6 +29,10 @@
     padding: 20px;
     /* align-content: center;
     align-items: center; */
+}
+
+.info-box-wrap > *{
+    align-self: center;
 }
 
 
@@ -53,7 +57,7 @@
     padding: 10px;
 }
 .input-wrap-edit input{
-    width: 80%;
+    width: 70%;
     padding: none;
     display: block;
     font-size: 1.2rem;
@@ -90,5 +94,6 @@
     
 }
 .btn-desabled{
-    background-color: rgba(235, 17, 17, 0.55);
+    background-color: white;
 }
+

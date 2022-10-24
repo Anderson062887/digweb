@@ -10,8 +10,10 @@ import {Consumer} from "./component/context/context";
 import {PrivedRoute} from "./user/PreviedRoute";
 import ListDownloads from "./component/sctool/dwlist/FileList";
 import Order from "./component/sctool/dwlist/Order";
+import Itemsform from "./component/sctool/Items/addItemForm";
 import {Sidebar} from "./component/sidebar/sidebar";
 import  UploadFileForm from "./component/sctool/dwlist/uploadForm";
+
 
 
  
@@ -29,6 +31,7 @@ const Home =()=>{
         </>}
        
         <h1>Home page component</h1>
+        
          
       </div>
       }}
@@ -57,10 +60,11 @@ const [show,toggleNav] = useReducer( show => !show ,false )
       {({setUser,user})=>{
       //  console.log(user)
         return (
-          <div className={user !== null?"two-col-layout":"App"}>
+          <div className={user !== null? show !== true?"two-col-layout":"wide-view ":"App"}>
             <Router>
+            
                   {user !== null && <Sidebar show={show}/>} 
-             <div className="route-box"> 
+             <div className={"route-box"}> 
                   {user !== null && <Nav  hideNav={toggleNav} show={show}/> } 
                   
             <Switch>
@@ -74,7 +78,8 @@ const [show,toggleNav] = useReducer( show => !show ,false )
                    <PrivedRoute exact path="/list" component={ListDownloads} />
                    <PrivedRoute exact path="/list/upload" component={UploadFileForm} />
                    <PrivedRoute exact path="/list/view/:filename" component={Order} />
-            
+                   <PrivedRoute exact path="/list/create/item" component={Itemsform}/>
+                   
                   
                   {/* <Route exact path="/login" component={Login} user={context.user} />   */}           
                     {/* <Route exact path="/" render={()=><div>Home page</div>} /> */}

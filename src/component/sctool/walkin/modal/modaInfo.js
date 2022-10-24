@@ -1,12 +1,19 @@
 import React, {useState,useEffect} from "react"
 import "./modalInfo.css";
 import LocationHistory from "./locationHistory";
-import {CloseModal} from "./closeModal"
+import {CloseModal} from "./closeModal";
+import Detail from "../modal/Detail";
 
 
 const ModalInfo = ({data,clearmodal,deleteInfo,clearModalAndEdit,history})=>{
 
-  const {name,quantity,date} = data;
+  const {name,quantity,date,itemInformation} = data;
+
+
+// if(itemInformation !== undefined){
+//  const {category,pack_Type,pack_size,pack_unit} = itemInformation;
+// }
+
   const [editing,setEditing] = useState(false)
   const [num,setNum] = useState(quantity);
 
@@ -21,7 +28,9 @@ const ModalInfo = ({data,clearmodal,deleteInfo,clearModalAndEdit,history})=>{
        
 
         <div className="info-container">
+
             <div className="info-box-wrap">
+                
                 <CloseModal   clearmodal={clearmodal} editing={editing} date={date} />
             <h1> Item: {name}</h1>         
      {editing === true?
@@ -29,16 +38,16 @@ const ModalInfo = ({data,clearmodal,deleteInfo,clearModalAndEdit,history})=>{
           <h3> Quantity :</h3><input onChange={({target})=>setNum(target.value)} value={num} /> 
     </div>:<p>Quantity: {num}</p>}
 
+              {itemInformation &&  <Detail detail={itemInformation} />} 
+
                  <div className="action-btn-wrap">
                             <button className={ editing === true?"edit-btn btn-inactive":"edit-btn btn-active"} onClick={()=> setEditing(!editing)}>
                             {editing === false?  "Edit":"Done"}
                             </button> 
-
-                         {editing === true? 
+                            <button   className={editing !== true?"delete-btn":" btn-desabled" } onClick={deleteInfo}>Delete</button> 
+                         {/* {editing === true? 
                        <button   className={"delete-btn btn-desabled" } style={{backgroundColor:"white"}}>Delete</button> 
-                      : <button   className={"delete-btn" } onClick={deleteInfo}>Delete</button>  }
-                            
-
+                      : <button   className={"delete-btn" } onClick={deleteInfo}>Delete</button>  } */}
                  </div>
                             
                    

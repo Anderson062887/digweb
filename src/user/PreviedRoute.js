@@ -11,7 +11,7 @@ export const PrivedRoute =({component:Component,...rest})=>{
   
              return <Route {...rest} render={(props)=> {
             
-                  return  user !== null? <Component  {...props}/> :<Redirect to={{pathname:"/login",state:{from:props.location}}} />;
+                  return  user !== null? <Component  {...props} user={user}/> :<Redirect to={{pathname:"/login",state:{from:props.location}}} />;
 
              }}/>
             }}

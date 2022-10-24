@@ -1,6 +1,7 @@
 
-
+const currentIp = "192.168.1.182";
 const url = `http://localhost:5000/microorganisms/`;
+
 
  export function FecthData(params) {
     
@@ -45,7 +46,7 @@ export async function sendData(data) {
 export async function CreateItem(data) {
     
    
-    const res =  await fetch(`http://localhost:5000/items/create`,{
+    const res =  await fetch(`http://localhost:5000/walkin/items/create`,{
         method: 'POST',
         credentials:"same-origin",
         headers: {
@@ -59,7 +60,7 @@ export async function CreateItem(data) {
 export async function getWalkInData() {
       
     try {
-        const res =  await fetch(`http://localhost:5000/items`)
+        const res =  await fetch(`http://${currentIp}:5000/walkin/items`)
         return res.json()
     } catch (error) {
       console.log(error.message)
@@ -69,7 +70,7 @@ export async function getWalkInData() {
 export async function deleteItem(loc) {
       
     try {
-        const res =  await fetch(`http://localhost:5000/items/delete/${loc}`)
+        const res =  await fetch(`http://localhost:5000/walkin/items/delete/${loc}`)
         return res.json()
     } catch (error) {
       console.log(error.message)
@@ -78,7 +79,7 @@ export async function deleteItem(loc) {
 export async function editItem(loc,num) {
       
     try {
-        const res =  await fetch(`http://localhost:5000/items/edit/${loc}/${num}`)
+        const res =  await fetch(`http://localhost:5000/walkin/items/edit/${loc}/${num}`)
         return res.json()
     } catch (error) {
       console.log(error.message)

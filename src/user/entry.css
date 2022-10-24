@@ -21,3 +21,8 @@
     background-position: center;
    
 }
+.btn-logout{
+    width: 40px;
+  cursor: pointer;
+    
+}

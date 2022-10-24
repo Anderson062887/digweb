@@ -39,6 +39,7 @@ class ChooseTest extends Component{
 
     componentDidMount(){
         const [,,params] = this.props.match.url.split("/")
+       
           FecthData(params)
           .then( d => this.setState((prevState)=>({...prevState,data:[...d]}) ))
           .catch( e => console.log(e));

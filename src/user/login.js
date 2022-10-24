@@ -23,6 +23,7 @@ class Login extends React.Component{
       const{email,password} = this.state;
       const mailValid = EmailValidate(email);
       const pasValid = checkpassword(password)
+      console.log(this.state)
       
      if(mailValid && pasValid){
          LogIn({email,password})

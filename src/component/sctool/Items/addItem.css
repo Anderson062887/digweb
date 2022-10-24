@@ -1,0 +1,79 @@
+.createItem-form-wrapper{
+    /* border: 1px solid; */
+    height: calc(100vh - 80px);
+    display: grid;
+    width:100%;
+    
+
+    
+}
+
+.createItem-form{
+    width:70%;
+    margin: auto;
+    box-shadow: 0px 0px 2px 0.3px rgba(0,0,0, 0.4);
+}
+
+.form-section{
+    /* border: 1px solid; */
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-section-3-col{
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.createItem-input-field{
+    /* border:2px solid red; */
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.createItem-input-field label{
+font-size: 1.3rem;
+font-weight: bold;
+margin: 10px 0;
+}
+
+.createItem-input-field input[type="text"],textarea{
+    border: none;
+    box-shadow: 0px 0px 2px 0.4px rgba(0,0,0, 0.8);
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+    /* padding: 1rem; */
+    /* display: block;
+    width: 90%; */
+    
+    font-size: 1.2rem;
+    padding: 0.1rem;
+    /* background-color: rgba(222, 222, 222, 0.365) */
+}
+
+
+.createItem-form-wrapper form button{
+    width: 200px;
+    margin: 30px auto;
+    display: block;
+}
+
+.createItem-input-field  select{
+    outline: none;
+    background-color: transparent;
+    box-shadow: 0px 0px 0.5px 0.4px rgba(0,0,0, 0.3);
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+    /* width:90%; */
+}
+input:active{
+    outline: none;
+}
+
+

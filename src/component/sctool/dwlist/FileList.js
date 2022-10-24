@@ -25,6 +25,7 @@ const ListDownloads = (props)=>{
                  <div>
                   {list.map((file,i)=>{
 
+                           
                             return(
                                   <div className="list" key={i}>
                                     <p>{file}</p>
@@ -36,12 +37,7 @@ const ListDownloads = (props)=>{
                     }
                   </div>
    </div>)
-
-
-         
-        
-  
-    
+ 
 
     } 
 export default ListDownloads;

@@ -42,7 +42,7 @@ class Spot extends React.Component{
 
     }
     handleAddForm(data){  
- 
+    
         data.locId = this.props.id;
         CreateItem(data)
         .then(r => console.log(r))

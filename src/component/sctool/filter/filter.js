@@ -5,23 +5,23 @@ import SelectionDiv from "./selector";
 
 
 
-class FilterStrategy{
-     Category(list,category){
-         if(category === "All"){
-             return list;
-         }
-       return list.filter(order => order.Category === category);  
-    }
-     Restaurant(list,restaurant){
-        if(restaurant === "All"){
-            return list;
-        }
-        return  list.filter(order => order.Restaurant === restaurant);
-    }
+// class FilterStrategy{
+//      Category(list,category){
+//          if(category === "All"){
+//              return list;
+//          }
+//        return list.filter(order => order.Category === category);  
+//     }
+//      Restaurant(list,restaurant){
+//         if(restaurant === "All"){
+//             return list;
+//         }
+//         return  list.filter(order => order.Restaurant === restaurant);
+//     }
 
-}
+// }
 
-const strategy = new FilterStrategy();
+// const strategy = new FilterStrategy();
 
 class Filter extends React.Component{
     constructor(props){

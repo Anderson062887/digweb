@@ -54,3 +54,12 @@ export async function createRestaurant(data) {
     }
   
 }
+
+export async function GetOneRestaurant(id){
+    try {
+        const res  = await fetch(`http://localhost:5000/orders/restaurant/view/${id}`);
+              return res.json();
+    } catch (error) {
+        console.log(error);
+    }
+}

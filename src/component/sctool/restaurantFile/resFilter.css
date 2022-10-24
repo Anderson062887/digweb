@@ -1,0 +1,78 @@
+.filter-box{
+    width:100%;
+    /* border:1px solid; */
+    position: relative;
+    display: flex;
+justify-content: center;
+align-items: center;
+    /* overflow: scroll; */
+    /* margin: auto 20px  20px auto; */
+    /* margin-left: auto;
+    margin-right: 20px; */
+ 
+    
+
+   
+}
+.filter-control{
+    position: relative;
+    /* border: 1px solid; */
+    width: 100%;
+    padding: 4px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 1px 2px rgba(201, 200, 200, 0.619);
+    display: flex;
+    justify-content: end;
+}
+.filter-control p{
+    font-size: 1.2rem;
+    margin:auto;
+    color: rgba(89, 88, 88, 0.92);
+}
+
+
+.res-select-wrapper{
+    position: absolute;
+    /* background-color: rgba(201, 200, 200, 0.81); */
+    background: #F9F8FD; 
+    overflow: scroll;
+    margin: auto;
+    width: 50%;
+    color: rgba(89, 88, 88, 0.92);
+    top:101%;
+    box-shadow: 0px 0px 1px 0.4px rgba(45, 44, 44, 0.338); 
+    
+}
+
+.res-selection-box-div{
+    max-height: 0;
+    transition: all 0.4s ease-out;
+    z-index: 2;
+    
+    
+}
+.res-display-visible-div{ 
+    transition:max-height 0.3s ease-in;
+    max-height: 300px;
+  
+  }
+
+  .list-select{
+    border-bottom:0.1px solid rgba(201, 200, 200, 0.386);
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+    cursor: pointer;
+    padding: 6px 12px; 
+  }
+  .list-select:hover{
+     background-color: #ddd;
+  }
+
+.select-btn{
+  display: flex;
+  justify-content: space-evenly;
+ align-items: center;
+
+}
+ 

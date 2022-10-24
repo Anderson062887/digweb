@@ -4,6 +4,7 @@ import { AiOutlineUser,AiOutlineMenu} from "react-icons/ai";
 //AiOutlineUser
 import {NavLink} from "react-router-dom";
 import {Consumer} from "../component/context/context";
+import {Logout} from "./../user/Logout.js";
 export const Nav =({hideNav})=>(<Consumer>
 
     {({user})=>{
@@ -11,14 +12,16 @@ export const Nav =({hideNav})=>(<Consumer>
        return(
         <div className="navbar">
         <header>
+     
             <h2 onClick={x => hideNav()}><AiOutlineMenu /></h2>
             {user !== null? 
                      <nav>
-                        
+                    
                  <ul>
                      {/* <li><NavLink to="/">🏠 Home</NavLink></li> */}
                      {/* <li><NavLink to="/microorganisms"> 🦠 Microorganisms</NavLink></li> */}
                      {/* <li><NavLink to="/personalhealth"> 👩🏻‍🍳 Personal </NavLink></li> */}
+                    <li>   <Logout />   </li>
                      <li>{user.name}</li> 
                      <li> <AiOutlineUser size={28}/></li> 
                  </ul>

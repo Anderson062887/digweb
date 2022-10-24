@@ -3,7 +3,7 @@ import "./uploadForm.css";
 import {Warning} from "../../warning";
 import { FcCheckmark} from "react-icons/fc";
 import XLSX from "xlsx";
-import {postOrders } from "../../../util/restaurantApi/restaurantApi"
+// import {postOrders } from "../../../util/restaurantApi/restaurantApi"
 
 class StrategyFilter{
     filterArrayLengthOf7(list){
@@ -50,21 +50,21 @@ class Handler{
     }
 }
 
-class ChainHandler{
-    constructor(){
-        const handle7 = new Handler(7,strategyHandler.filterArrayLengthOf7)
-        const handle8 = new Handler(8,strategyHandler.filterArrayLengthOf8)
-        const handle9 = new Handler(9,strategyHandler.filterArrayLengthOf9)
-        handle7.setNext(handle8);
-        handle8.setNext(handle9);
-        this.handler = handle7
+// class ChainHandler{
+//     constructor(){
+//         const handle7 = new Handler(7,strategyHandler.filterArrayLengthOf7)
+//         const handle8 = new Handler(8,strategyHandler.filterArrayLengthOf8)
+//         const handle9 = new Handler(9,strategyHandler.filterArrayLengthOf9)
+//         handle7.setNext(handle8);
+//         handle8.setNext(handle9);
+//         this.handler = handle7
 
-    }
-    handle(list){
-       let result =  this.handler.handle(list);
-       console.log(result)
-    }
-}
+//     }
+//     handle(list){
+//        let result =  this.handler.handle(list);
+//        console.log(result)
+//     }
+// }
 
 const HandleCsv = (csv)=>{
     const[,...rows ]=  csv.split("\n")

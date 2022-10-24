@@ -21,7 +21,7 @@ class Order extends React.Component{
 
     render(){
     const {orders} = this.state;
-    
+    console.log(orders)
         return(
             <div className="list-wrap">
                           <div className="description">

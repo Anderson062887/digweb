@@ -5,7 +5,8 @@ import "./restaurantCard.css";
 import "./restaurantDisplayMain.css"
 import {RestaurantFilter} from "./restaurantFilter"
 
-export const Restaurant = ()=>{
+export const Restaurant = (props)=>{
+   
     const [list,setList] = useState([])
     const [res,setRes] = useState([]);
     const [display,setDisplay] = useState(list);
